@@ -3,7 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = dirname(fileURLToPath(import.meta.url));
-const src = join(root, "entry.png");
+const src = join(root, "entry 2.png");
 const dest = join("/output", "entry.png");
 
 mkdirSync("/output", { recursive: true });
@@ -15,4 +15,4 @@ const destBytes = statSync(dest).size;
 if (srcBytes !== destBytes) {
   throw new Error(`copy size mismatch: ${srcBytes} vs ${destBytes}`);
 }
-console.log(`entry.png copied to /output/entry.png (${destBytes} bytes)`);
+console.log(`entry 2.png copied to /output/entry.png (${destBytes} bytes)`);
